@@ -47,11 +47,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -276,7 +274,7 @@ fun LoginScreen(
                             modifier = Modifier
                                 .size(25.sdp)
                                 .align(Alignment.CenterStart),
-                            imageVector = ImageVector.vectorResource(id = R.drawable.ic_user),
+                            painter = painterResource(id = R.drawable.ic_user),
                             contentDescription = "User icon",
                             tint = Color.White
                         )
@@ -327,7 +325,7 @@ fun EmailTextField(
             ) {
                 Icon(
                     modifier = Modifier.size(35.sdp),
-                    imageVector = ImageVector.vectorResource(id = R.drawable.email_icon),
+                    painter = painterResource(id = R.drawable.email_icon),
                     contentDescription = "Email Icon",
                     tint = Color(0xFF36CC16)
                 )
@@ -388,7 +386,7 @@ fun PasswordTextField(
             ) {
                 Icon(
                     modifier = Modifier.size(35.sdp),
-                    imageVector = ImageVector.vectorResource(id = R.drawable.password_icon),
+                    painter = painterResource(id = R.drawable.password_icon),
                     contentDescription = "Password Icon",
                     tint = Color(0xFF36CC16)
                 )
