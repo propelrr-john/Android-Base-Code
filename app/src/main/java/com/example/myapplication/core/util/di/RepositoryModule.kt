@@ -1,4 +1,4 @@
-package com.example.myapplication.features.login.di
+package com.example.myapplication.core.util.di
 
 import com.example.myapplication.features.login.data.remote.ApiService
 import com.example.myapplication.features.login.data.repository.LoginRepositoryImpl
@@ -15,7 +15,7 @@ object RepositoryModule {
 
     @Singleton
     @Provides
-    fun provideApiService(api: ApiService): LoginRepository {
+    fun provideLoginRepository(api: ApiService): LoginRepository {
         return LoginRepositoryImpl(api)
     }
 

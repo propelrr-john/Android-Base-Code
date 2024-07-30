@@ -1,9 +1,11 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    alias(libs.plugins.kotlin.kapt)
+//    alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.google.dagger.hilt.android)
     alias(libs.plugins.jetbrains.kotlin.plugin.serialization)
+    alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -33,17 +35,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
     }
     packaging {
         resources {
@@ -91,11 +90,21 @@ dependencies {
     implementation(libs.squareup.retrofit2.gson.converter)
     implementation(libs.squareup.okhttp3)
     implementation(libs.squareup.okhttp3.logging.interceptor)
+    implementation(libs.skydoves.sandwich.retrofit)
 
     // Dagger Hilt
     implementation(libs.google.dagger.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose)
-    kapt(libs.androidx.hilt.compiler)
-    kapt(libs.google.dagger.hilt.android.compiler)
+    ksp(libs.androidx.hilt.compiler)
+    ksp(libs.google.dagger.hilt.android.compiler)
 
+    // Intuit SDP SSP
+    implementation(libs.intuit.sdp.android)
+    implementation(libs.intuit.ssp.android)
+
+    // Datastore
+    implementation(libs.androidx.datastore)
+
+    // Window Size Class
+    implementation(libs.androidx.compose.material3.window.size)
 }

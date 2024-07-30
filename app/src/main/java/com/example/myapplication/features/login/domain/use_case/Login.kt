@@ -4,7 +4,7 @@ import com.example.myapplication.common.Resource
 import com.example.myapplication.features.login.domain.model.AccessToken
 import com.example.myapplication.features.login.domain.model.LoginCredential
 import com.example.myapplication.features.login.domain.repository.LoginRepository
-import com.example.myapplication.features.login.presentation.util.mapToDomainModel
+import com.example.myapplication.core.util.domain.mapper.mapToDomainModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

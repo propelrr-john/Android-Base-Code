@@ -8,7 +8,11 @@ pluginManagement {
             }
         }
         mavenCentral()
+        mavenLocal()
         gradlePluginPortal()
+        maven {
+            url = uri("Users/propelrr/.m2/repository")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -16,8 +20,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
+        maven {
+            url = uri("Users/propelrr/.m2/repository")
+        }
     }
 }
 
 rootProject.name = "My Application"
 include(":app")
+include(":testlibrary")

@@ -6,4 +6,6 @@ sealed class LoginAction {
     data class Authenticate(
         val loginCredential: LoginCredential
     ): LoginAction()
+
+    object RefreshToken: LoginAction()
 }

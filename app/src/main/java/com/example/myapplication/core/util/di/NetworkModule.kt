@@ -1,4 +1,4 @@
-package com.example.myapplication.features.login.di
+package com.example.myapplication.core.util.di
 
 import com.example.myapplication.common.Constants
 import com.example.myapplication.features.login.data.remote.ApiService
